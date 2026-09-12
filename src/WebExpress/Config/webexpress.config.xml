@@ -12,6 +12,14 @@
 		<maxrequestheaderstotalsize>65536</maxrequestheaderstotalsize>
 	</kestrel>
 
+	<!-- Session and its cookie. Optional; omit to keep the defaults (30-day sliding
+	     lifetime, Secure tracking the request scheme). timeout is in minutes; a
+	     non-positive value disables expiry. Set secure=true behind a TLS-terminating
+	     proxy so the cookie is marked https-only even though the server sees http. -->
+	<session>
+		<timeout>43200</timeout>
+	</session>
+
 	<culture>en-US</culture>
 
 	<packages>./packages</packages>
